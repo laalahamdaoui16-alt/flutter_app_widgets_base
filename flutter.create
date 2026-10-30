@@ -1,0 +1,140 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Atelier Flutter 02',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Atelier Flutter 02'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+        ),
+
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                // Étape 2 : Text
+                const Text(
+                  'Hello World!',
+                  style: TextStyle(fontSize: 26),
+                ),
+
+                const Text(
+                  'Bienvenue dans mon application Flutter',
+                  style: TextStyle(fontSize: 16),
+                ),
+
+                // Étape 3 : Container
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Column(
+                    children: [
+                      Text(
+                        'Boîte stylisée avec Container',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Text(
+                        'Mon premier Container Flutter',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Étape 4 : Stack
+                Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    Container(
+                      width: 200,
+                      height: 200,
+                      color: Colors.blue[100],
+                    ),
+                    const Icon(
+                      Icons.star,
+                      size: 100,
+                      color: Colors.amber,
+                    ),
+                    const Text(
+                      'Superposé !',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 20),
+
+                // Étape 5 : Row
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(Icons.home, color: Colors.blue, size: 40),
+                    Icon(Icons.star, color: Colors.amber, size: 40),
+                    Icon(Icons.settings, color: Colors.grey, size: 40),
+                    Icon(Icons.favorite, color: Colors.red, size: 40),
+                  ],
+                ),
+
+                const SizedBox(height: 25),
+
+                // Étape 6 : Deuxième Column
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Titre principal',
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Voici une description de mon application.',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Icon(
+                      Icons.thumb_up,
+                      color: Colors.green,
+                      size: 40,
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 30),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

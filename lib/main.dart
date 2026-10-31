@@ -17,9 +17,30 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Hello World!'),
-              Text('Bienvenue dans mon application Flutter'),
+              const Text('Hello World!'),
+              const Text('Bienvenue dans mon application Flutter'),
+              Container(
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: const [
+                    Text(
+                      'Boîte stylisée avec Container',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    Text(
+                      'Mon deuxième texte',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

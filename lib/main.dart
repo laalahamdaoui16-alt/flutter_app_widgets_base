@@ -17,17 +17,18 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text('Hello World!'),
               const Text('Bienvenue dans mon application Flutter'),
 
               Container(
-                margin: const EdgeInsets.all(20),
-                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple,
-                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(30),
                 ),
                 child: Column(
                   children: const [
@@ -60,10 +61,13 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Titre principal', style: TextStyle(fontSize: 22)),
-                  SizedBox(height: 20),
-                  Text('Sous-titre ou description'),
-                  Icon(Icons.thumb_up, color: Colors.green, size: 40),
+                  const Text('Titre principal', style: TextStyle(fontSize: 26)),
+                  const SizedBox(height: 20),
+                  const Text(
+                    'Sous-titre ou description',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  const Icon(Icons.thumb_up, color: Colors.green, size: 50),
                 ],
               ),
             ],
